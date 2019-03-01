@@ -19,18 +19,7 @@ actionsRouter.get('/', (req, res) => {
 		});
 });
 
-// // GET by Id:
 
-// actionsRouter.get('/:id', (req, res) => {
-// 	db('students')
-// 		.where({ id: req.params.id })
-// 		.then((student) => {
-// 			res.status(200).json(student);
-// 		})
-// 		.catch((error) => {
-// 			res.status(500).json(error);
-// 		});
-// });
 
 // // POST:
 
