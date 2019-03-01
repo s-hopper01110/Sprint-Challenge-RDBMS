@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "express": "^4.16.4",
+    "knex": "^0.16.3",
+    "nodemon": "^1.18.10",
+    "sqlite3": "^4.0.6"
+  },
+  "name": "Sprint-Challenge-RDBMS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/s-hopper01110/Sprint-Challenge-RDBMS.git",
+  "author": "Sheila <s.hopper01110@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "helmet": "^3.15.1"
+  }
+}
