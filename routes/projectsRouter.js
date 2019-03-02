@@ -33,15 +33,23 @@ projectsRouter.get('/', (req, res) => {
 projectsRouter.get('/:id/actions', (req, res) => {
 	const { id } = req.params;
 
-	db('actions')
+	db('projects')
         .where({ id })
-        .then(action =>{
-			if (action.length > 0) {
-				res.status(200).json(action)
+        .first()
+        .then(projects => {
+            console.log(projects)
+            db('actions') 
+            .where({ project_id : id })
+            
+            .then(actions => {
+                projects.action = actions
+                if (projects) { // ??
+				res.status(200).json(projects)
 			} else {
 				res.status(404).json({ success: false, message: 'The projects with the specified ID does not exist.' });
 			}
-		})
+        })
+    })
 		.catch((err) => {
 			res.status(500).json({ success: false, error: 'The project requested could not be retrieved.' });
 		});
